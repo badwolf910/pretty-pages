@@ -107,6 +107,16 @@ body.category-breakfast hr, body.category-soups hr, body.category-dinner hr, bod
 body.category-breakfast ul br, body.category-soups ul br, body.category-dinner ul br, body.category-sweets ul br { display: none; }
 body.category-breakfast ul li, body.category-soups ul li, body.category-dinner ul li, body.category-sweets ul li { margin-bottom: 2px; line-height: 1.45; }
 
+.category-page { max-width: 900px; margin: 0 auto; padding-top: 35px; }
+.category-page h1 { margin-top: 0 !important; }
+.category-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .8fr); gap: 24px; align-items: start; margin-top: 28px; }
+.category-links, .category-image { padding: 24px; background: #27272a; border: 1px solid #3f3f46; }
+.category-links ul { margin: 0; padding-left: 24px; }
+.category-links li { margin-bottom: 10px !important; }
+.category-image { display: grid; gap: 16px; }
+.category-image img { width: 100%; }
+.category-image a { justify-self: start; }
+
 @media (max-width: 720px) {
 	.site-header { align-items: flex-start; flex-direction: column; gap: 20px; }
 	.site-nav { justify-content: flex-start; gap: 12px 17px; }
@@ -120,4 +130,6 @@ body.category-breakfast ul li, body.category-soups ul li, body.category-dinner u
 	.site-footer { align-items: flex-start; flex-direction: column; gap: 12px; }
 	body:not(.home-page) { padding: 0 6vw 35px; }
 	.column1of2, .column2of2 { width: 100%; float: none; margin: 0 0 18px; }
+	.category-page { padding-top: 20px; }
+	.category-layout { grid-template-columns: 1fr; }
 }
