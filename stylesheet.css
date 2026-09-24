@@ -84,17 +84,25 @@ a { color: inherit; }
 /* Shared recipe-page styling */
 body:not(.home-page) { min-height: 100vh; padding: 0 5vw 50px; background: #18181b !important; background-image: none !important; color: #f5f5f4; font-family: 'DM Sans', 'Segoe UI', sans-serif !important; font-size: 16px !important; letter-spacing: 0 !important; }
 body:not(.home-page) .wrapper, body:not(.home-page) > div:first-child { max-width: 900px; margin: 0 auto; }
+body:not(.home-page) .wrapper { padding-top: 35px; }
+body:not(.home-page) .header { margin: 0 0 24px; }
 body:not(.home-page) h1, body:not(.home-page) h2, body:not(.home-page) h3 { color: #f5f5f4 !important; text-shadow: none !important; }
 body:not(.home-page) h1 { margin: 60px 0 15px; font-family: 'Playfair Display', Georgia, serif !important; font-size: clamp(2.5rem, 6vw, 4.5rem) !important; font-weight: 500; line-height: 1.05; }
+body:not(.home-page) .header h1 { margin: 0; }
+body:not(.home-page) h2 { max-width: 900px; margin: 42px auto 18px; font-family: 'Playfair Display', Georgia, serif !important; font-size: clamp(1.8rem, 3vw, 2.5rem) !important; font-weight: 500; }
 body:not(.home-page) h3 { margin: 38px 0 12px; font-family: 'DM Sans', sans-serif !important; font-size: 12px !important; letter-spacing: .14em !important; text-transform: uppercase; }
 body:not(.home-page) hr { border: 0; border-top: 1px solid var(--line); }
-body:not(.home-page) ul, body:not(.home-page) ol { color: #f5f5f4 !important; font-family: Georgia, serif !important; font-size: 18px !important; line-height: 1.75; }
+body:not(.home-page) ul, body:not(.home-page) ol { color: #f5f5f4 !important; font-family: Georgia, serif !important; font-size: 18px !important; line-height: 1.65; }
 body:not(.home-page) li { margin-bottom: 7px; }
 body:not(.home-page) p { color: #d6d3d1 !important; font-family: Georgia, serif !important; font-size: 18px !important; line-height: 1.75; }
 body:not(.home-page) a { color: #e08a68 !important; text-decoration: none; }
 body:not(.home-page) a:hover, body:not(.home-page) a:focus { color: #f1b59c !important; text-decoration: underline; text-underline-offset: 4px; }
 body:not(.home-page) img { max-width: 100%; height: auto; border: 1px solid #52525b; }
-.column1of2, .column2of2 { width: 45%; margin: 1%; padding: 24px; background: #27272a; border: 1px solid #3f3f46; }
+body:not(.home-page) > br { display: none; }
+.column1of2, .column2of2, .column1of3, .column2of3, .column3of3 { float: none !important; display: inline-block; vertical-align: top; width: calc(50% - 18px) !important; margin: 0 12px 24px 0 !important; padding: 24px; background: #27272a; border: 1px solid #3f3f46; }
+.column1of3, .column2of3, .column3of3 { width: calc(33.333% - 18px) !important; }
+.column1of2 ul, .column2of2 ul, .column1of3 ul, .column2of3 ul, .column3of3 ul { margin: 0; padding-left: 24px; }
+body:not(.home-page) .footer { max-width: 900px; margin: 24px auto 0; padding-top: 12px; border-top: 1px solid var(--line); clear: both; }
 .credits { margin-top: 45px !important; font-family: 'DM Sans', sans-serif !important; font-size: 12px !important; letter-spacing: .08em !important; text-transform: uppercase; }
 
 .category-breakfast { --page-accent: #b65b3d; }
@@ -120,7 +128,7 @@ body.category-breakfast ul li, body.category-soups ul li, body.category-dinner u
 @media (max-width: 720px) {
 	.site-header { align-items: flex-start; flex-direction: column; gap: 20px; }
 	.site-nav { justify-content: flex-start; gap: 12px 17px; }
-	.hero { width: 88vw; min-height: 350px; margin-top: 22px; background-position: 63% center; }
+	.hero { width: 88vw; min-height: 0; aspect-ratio: 640 / 423; margin-top: 22px; background-position: center; }
 	.welcome { display: block; padding-top: 65px; }
 	.welcome-copy { margin-top: 25px; font-size: 17px; }
 	.collections { padding-top: 0; }
@@ -129,7 +137,7 @@ body.category-breakfast ul li, body.category-soups ul li, body.category-dinner u
 	.card-title { font-size: 24px; }
 	.site-footer { align-items: flex-start; flex-direction: column; gap: 12px; }
 	body:not(.home-page) { padding: 0 6vw 35px; }
-	.column1of2, .column2of2 { width: 100%; float: none; margin: 0 0 18px; }
+	.column1of2, .column2of2, .column1of3, .column2of3, .column3of3 { width: 100% !important; margin: 0 0 18px !important; }
 	.category-page { padding-top: 20px; }
 	.category-layout { grid-template-columns: 1fr; }
 }
