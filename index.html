@@ -1,105 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smith Family Recipes | Cook with love</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164062835-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-164062835-1');
-</script>
-
-	<title> Smith Family Recipes </title>
-	<style type="text/css">
-		body {
-			text-shadow: 2px 2px 7px #111111;
-			max-width: 940px;
-			min-width: 120px;
-			margin: 0px auto 0px auto;
-			font-size: 100%;
-			font-family: "Courier New", Courier, monospace;
-			font-weight: normal;
-			letter-spacing: 0.18em;
-			background-image: url("./assets/dark.jpg");
-		}
-
-		#page {
-			max-width: 940px;
-			min-width: 120px;
-			margin: 10px auto 10px auto;
-			padding: 32px;
-			border: 4px double #000;
-			text-align: center;
-		}
-
-		#logo {
-			margin: 10px auto 15px auto;
-		}
-
-		ul {
-			max-width: 990px;
-			min-width: 100px;
-			padding: 10px;
-			margin: 0px auto 0px auto;
-			border-top: 2px solid #000;
-			border-bottom: 2px solid #000;
-			text-align: center;
-		}
-
-		li {
-			font-size: 14px;
-			display: inline;
-			margin: 15px auto;
-		}
-
-		p {
-			font-size: 12px;
-			text-shadow: 2px 2px 7px #111111;
-			text-align: center;
-			max-width: 750px;
-			min-width: 105px;
-			margin: 10px auto 10px auto;
-			color: #ffffff;
-		}
-
-		a {
-			color: #ffffff;
-			text-transform: uppercase;
-			text-decoration: none;
-			padding: 4px 18px 4px 18px;
-		}
-
-		a:hover,
-		a.on {
-			color: #000000;
-			background-color: #DEB887;
-		}
-	</style>
-
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164062835-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-164062835-1');
+	</script>
 </head>
 
-<body>
-	<div id="page">
-		<div id="logo">
-			<img src="./assets/wood.jpg" width="80%" height="80%" alt="Kitchen" />
-		</div>
-		<ul id="navigation">
-			<li><a href="Breakfast.html">Breakfast</a></li>
-			<li><a href="Soups.html">Soups & Sandwiches</a></li>
-			<li><a href="Dinner.html">Dinner & Sides</a></li>
-			<li><a href="Sweets.html">Sweets</a></li>
-			<li><a href="Us.html">About Us</a></li>
-		</ul>
-		<div>
-			<p>
-				Our family loves to cook as a way to show our love to each other. We hope you find love in these recipes
-				as well.
-			</p>
-		</div>
-	</div>
+<body class="home-page bg-zinc-900 text-stone-100">
+	<header class="site-header">
+		<a class="wordmark" href="index.html" aria-label="Smith Family Recipes home">
+			<span class="wordmark-script">Smith Family</span>
+			<span class="wordmark-subtitle">Recipes worth gathering for</span>
+		</a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="Breakfast.html">Breakfast</a>
+			<a href="Soups.html">Soups &amp; Sandwiches</a>
+			<a href="Dinner.html">Dinner &amp; Sides</a>
+			<a href="Sweets.html">Sweets</a>
+			<a href="Us.html">Our Story</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero bg-zinc-800" aria-label="Smith Family Recipes kitchen">
+		</section>
+
+		<section class="welcome">
+			<p class="welcome-copy">Our family loves to cook as a way to show our love to each other. These are the dependable favorites, handwritten keepers, and sweet traditions we hope you will make your own.</p>
+		</section>
+
+		<section class="collections" id="collections" aria-labelledby="collections-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Find your next favorite</p>
+					<h2 id="collections-title">Browse the table</h2>
+				</div>
+				<span class="section-rule" aria-hidden="true"></span>
+			</div>
+			<div class="collection-grid">
+				<a class="collection-card card-breakfast" href="Breakfast.html"><span class="card-number">01</span><span class="card-title">Breakfast</span><span class="card-link">Start the day &rarr;</span></a>
+				<a class="collection-card card-soup" href="Soups.html"><span class="card-number">02</span><span class="card-title">Soups &amp;<br>Sandwiches</span><span class="card-link">Comfort awaits &rarr;</span></a>
+				<a class="collection-card card-dinner" href="Dinner.html"><span class="card-number">03</span><span class="card-title">Dinner<br>&amp; Sides</span><span class="card-link">Gather around &rarr;</span></a>
+				<a class="collection-card card-sweets" href="Sweets.html"><span class="card-number">04</span><span class="card-title">Sweets</span><span class="card-link">End on a high note &rarr;</span></a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<span>Smith Family Recipes</span>
+		<span>Cook with love &middot; Share generously</span>
+	</footer>
 </body>
 
 </html>
